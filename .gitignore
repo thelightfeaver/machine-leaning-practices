@@ -1,1 +1,2 @@
-datasets/housing.tgz
+datasets/*.tgz
+*.pkl
