@@ -10,7 +10,6 @@ data = {
     'deparment':{'Analyst': 0, 'Senior Analyst': 4, 'Associate': 1, 'Senior Manager': 5, 'Manager': 3, 'Director': 2}
 }
 
-
 experience = st.slider('Experience:', 0, 23, 5)
 unit = st.selectbox('Unit:', data['unit'].keys())
 deparment = st.selectbox('Department:', data['deparment'].keys())
