@@ -1,5 +1,4 @@
 datasets/*.tgz
-*.pkl
 mlruns
 mlartifacts
 __pycache__
