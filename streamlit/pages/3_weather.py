@@ -1,5 +1,5 @@
-import streamlit as st
 import joblib
+import streamlit as st
 
 model = joblib.load('streamlit/model/weather.pkl')
 
