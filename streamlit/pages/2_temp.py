@@ -2,19 +2,15 @@ import joblib
 import streamlit as st
 
 
+model = joblib.load("streamlit/model/temp.pkl")
 
-model = joblib.load('streamlit/model/temp.pkl')
+st.title("Celsius to Fahrenheit 🌡️")
+temperature = st.slider("Temperature", 0, 100, 25)
 
-temperature = st.sidebar.slider('Temperature', 0, 100, 25)
-
-prediction = model.predict([[temperature]])
-
-st.title(f'The current temperature is {temperature}°C 🌡️')
-st.markdown(f"""
-    ### Convertion {round(prediction[0][0]) } °H
-""")
-
-
-
-
-
+if st.button("Convert"):
+    prediction = model.predict([[temperature]])
+    st.markdown(
+        f"""
+        ### Conversion: {round(prediction[0][0])} °F
+    """
+    )
